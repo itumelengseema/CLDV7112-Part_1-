@@ -2,7 +2,26 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container mt-5">
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Welcome to ABC Retailers!</h1>
+        <p class="lead">Your one-stop shop for all retail needs.</p>
+        <hr class="my-4">
+
+        <!-- Navigation Buttons -->
+        <div class="row">
+            <div class="col-md-3 mb-3">
+                <a href="@Url.Action("Create", "CustomerProfiles")" class="btn btn-primary btn-block">CustomerProfiles</a>
+            </div>
+            <div class="col-md-3 mb-3">
+                <a href="@Url.Action("Create", "Products")" class="btn btn-secondary btn-block">Products</a>
+            </div>
+            <div class="col-md-3 mb-3">
+                <a href="@Url.Action("CreateOrder", "OrderProcessing")" class="btn btn-success btn-block">Orders</a>
+            </div>
+            <div class="col-md-3 mb-3">
+                <a href="@Url.Action("UploadFile", "FileStorage")" class="btn btn-info btn-block">File Storage</a>
+            </div>
+        </div>
+    </div>
 </div>

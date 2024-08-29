@@ -1,0 +1,29 @@
+﻿@model Microsoft.AspNetCore.Http.IFormFile
+
+@{
+    ViewData["Title"] = "Upload File";
+}
+
+<div class="container mt-5">
+    <h2>@ViewData["Title"]</h2>
+    <hr />
+    
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <form asp-action="UploadFile" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="file">Select a file to upload</label>
+                    <input type="file" class="form-control-file" id="file" name="file" />
+                </div>
+                <button type="submit" class="btn btn-primary">Upload</button>
+            </form>
+        </div>
+    </div>
+    
+    @if (ViewBag.UploadStatus != null)
+    {
+        <div class="alert alert-info mt-3">
+            @ViewBag.UploadStatus
+        </div>
+    }
+</div>
